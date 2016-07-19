@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS mobile */
+@media only screen  
+and (max-width : 1223px) {  
+	*{
+		margin: 0;
+	}  
+	#box{
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		z-index: 888;
+		left: 0%;
+		}
+	#chooseyear, #choosemonth, #backtoday {
+		display: none;
+		width: 21%;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-top: 2%;
+		border: 1px #000 solid;
+		box-shadow: 1px 1px 1px #888888 inset;
+		float: left;
+		z-index: 999;
+		
+		height: 25px;
+		font-family: arial;
+		font-size: 10px;
+		text-align: center;
+		line-height: 25px;
+		}
+	#backtoday{
+		background: #EEE;
+		box-shadow: 1px 1px 1px #FFF inset;
+		}
+	#chooseyear:hover, #choosemonth:hover, #backtoday:hover{
+		cursor: pointer;
+		}
+	#titleyear{
+		display:inline;
+		}
+	#titlemonth{
+		display:inline;
+		}
+	#listyear, #listmonth{
+		background: #EEE;
+		position: absolute;
+		display: none;
+		width: 20%;
+		height: 310px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		z-index: 1000;
+		}
+	#listyear li,#listmonth li{
+		margin-left: -30px;
+		list-style-type: none;
+		text-aligh: center;
+		}
+	#listyear li:hover,#listmonth li:hover{
+		cursor: pointer;
+		background: #BBB;
+		}
+	.rightlisticon{
+		float: right;
+		height: 100%;
+		width: 15%;
+		background: #EEE;
+		}
+	.leftlisticon{
+		float: left;
+		height: 100%;
+		width: 15%;
+		background: #EEE;
+		}
+	.downlisticon{
+		float: right;
+		height: 100%;
+		width: 15%;
+		background-color: #EEE;
+		}
+			
+	#showboard{
+		float: right;
+		width: 30%;
+		height:100%;
+		background: #09F;
+		font-family: arial;
+		color: #FFF;
+		}
+	#mobileboardtitle{
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 10%;
+		font-size: 10px;
+		text-align: center;
+		}
+	#boardtitle{
+		display: none;
+		margin-top: 10%;
+		font-size: 10px;
+		text-align: center;
+		}
+	#bigdate{
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 10%;
+		background: rgb(255,184,0);
+		font-size: 60px;
+		text-align: center;
+		}
+	
+	#lunardate{
+		margin-top: 5%;
+		font-size: 10px;
+		text-align: center;
+		}
+	#lunaryear{
+		margin-top: 5%;
+		font-size: 10px;
+		text-align: center;
+		}
+	
+	.line{
+		display: none;
+		width: 80%;
+		margin-top: 10%;
+		margin-left: 10%;
+		height: 2px;
+		background: rgba(255,255,255,0.8);
+		}
+	#jinji{
+		display: none;
+		text-align: center;
+		margin-top: 10%;
+		font-size: 35px;
+		}
+		
+	#wrap{
+		float: left;
+		z-index: 1;
+		margin-top: 0px;
+		margin-left: 0px;
+		width:70%;
+		height: 100%;
+		background: #999;
+		}
+	#calendar{
+		width: 100%;
+		height: 100%;
+		background: #FFF;
+		}	
+	.calendarday{
+		width: 14.2%;
+		background: rgba(0,204,204,1);
+		}
+	.notthismon{
+		width: 14.2%;
+		background: rgba(0,204,204,0.4);
+		}
+	.weektitle{
+		width: 14.2%;
+		height: 5%;
+		background: #0CC;
+		}
+	.week{
+		text-align: center;
+		}
+	.solar{
+		text-align: center;
+		}
+	.lunar{
+		text-align: center;
+		font-size: 10px;
+		}
+	.holiday{
+		width: 80%;
+		margin-left: 10%;
+		text-align: center;
+		font-size: 10px;
+		color: red;
+		white-space:nowrap; 
+		overflow:hidden;
+		text-overflow:ellipsis;
+		}
+	.calendarday:hover,.notthismon:hover{
+		cursor: pointer;
+		}
+	.weekend{
+		color: red;
+		}
+}	
+
+

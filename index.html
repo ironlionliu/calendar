@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="calendar.css" />
+<link rel="stylesheet" href="calendar-mobile.css" />
+</head>
+<body>
+<div id = "box">
+
+	<div id = "chooseyear" onclick = "chooseYear()">
+    	<div id = 'titleyear'>
+        </div>
+        <div class = "downlisticon">
+        	<img src = "listicon.png" style="width:70%; height:50%;" >
+        </div>
+        <div id = "listyear" onclick = "selectYear(event)">
+            <!--内部为年份列表，在js中完成加载-->
+        </div>
+    </div>
+
+    <div id = "choosemonth" onclick = "chooseMonth()">
+    	<div id = 'titlemonth'>
+        </div>
+        <div class = "rightlisticon" onclick = "nextMonth(event)">
+        	>
+        </div>
+        <div class = "leftlisticon" onclick = "lastMonth(event)">
+        	<
+        </div>
+        <div id = "listmonth" onclick = "selectMonth(event)">
+    	</div>
+    </div>
+    
+    <div id = "backtoday" onclick="backToday()" >返回今天</div>
+    <div id="showboard">
+    	<div id="boardtitle">
+        	2016-04-13 星期三
+        </div>
+        <input id="mobileboardtitle" type="month" value='2016年4月' onchange='mobileop()'/>
+        <div id="bigdate">
+        	13
+        </div>
+        <div id="lunardate">
+        	三月初七
+        </div>
+        <div id="lunaryear">
+        	丙申年 【猴年】
+        </div>
+        <div class="line">
+        </div>
+        <div id = "jinji">
+        	宜 忌
+        </div>
+    </div>
+    <div id="wrap">
+		<table id="calendar" onclick = "clickDay(event)"></table>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+<script type = "text/javascript" src = "handleDay.js"></script>
+<script type = "text/javascript" src = "opdom.js"></script>
+<script type = "text/javascript" src = "render.js"></script>
+<script type = "text/javascript">
+	window.onload = function(){
+		lastClick = null;
+		currentClick = null;
+		init();
+		};
+</script>
