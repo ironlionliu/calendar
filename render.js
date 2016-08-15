@@ -100,13 +100,9 @@
 					_html = _html + '<div class="holiday">'+_lunar+'</div>'+hiddenindex;
 				}else if(renderObj.term){
 					_lunar = renderObj.term;
-					if(sw > 1000&&_lunar.length>3){_lunar = _lunar.substr(0,2)+"...";}
-					if(sw < 1000&&_lunar.length>2){_lunar = _lunar.substr(0,1)+"...";}
 					_html = _html + '<div class="holiday">'+_lunar+'</div>'+hiddenindex;
 				}else {
 					_lunar = renderObj.lunar.dateArr;
-					if(sw > 1000&&_lunar.length>3){_lunar = _lunar.substr(0,2)+"...";}
-					if(sw < 1000&&_lunar.length>2){_lunar = _lunar.substr(0,1)+"...";}
 					_html = _html + '<div class="lunar">'+_lunar+'</div>'+hiddenindex;
 					}
 				
