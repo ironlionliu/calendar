@@ -50,6 +50,7 @@
 		var _month = date.getMonth();
 		var _date = date.getDate();
 		var _height = 15;
+		var _width = 10;
 		if(row == 6){
 			_height = 13.66;
 			}
@@ -85,16 +86,26 @@
 					}
 				var _lunar = '';
 				var hiddenindex = '<p style="display:none">'+index+'</div>';
+				var sw = (window.screen.width);
 				if(renderObj.holiday.solar){
 					_lunar = renderObj.holiday.solar;
+					if(sw > 1000){_lunar = _lunar.substr(0,2)+"...";}
+					if(sw < 1000){_lunar = _lunar.substr(0,1)+"...";}
+					
 					_html = _html + '<div class="holiday">'+_lunar+'</div>'+hiddenindex;
 				}else if(renderObj.holiday.lunar){
+					if(sw > 1000){_lunar = _lunar.substr(0,2)+"...";}
+					if(sw < 1000){_lunar = _lunar.substr(0,1)+"...";}
 					_lunar = renderObj.holiday.lunar;
 					_html = _html + '<div class="holiday">'+_lunar+'</div>'+hiddenindex;
 				}else if(renderObj.term){
+					if(sw > 1000){_lunar = _lunar.substr(0,2)+"...";}
+					if(sw < 1000){_lunar = _lunar.substr(0,1)+"...";}
 					_lunar = renderObj.term;
 					_html = _html + '<div class="holiday">'+_lunar+'</div>'+hiddenindex;
 				}else {
+					if(sw > 1000){_lunar = _lunar.substr(0,2)+"...";}
+					if(sw < 1000){_lunar = _lunar.substr(0,1)+"...";}
 					_lunar = renderObj.lunar.dateArr;
 					_html = _html + '<div class="lunar">'+_lunar+'</div>'+hiddenindex;
 					}
