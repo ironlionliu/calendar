@@ -106,6 +106,7 @@
 					_html = _html + '<div class="lunar">'+_lunar+'</div>'+hiddenindex;
 					}
 				
+				
 				cells[index].innerHTML = _html;
 				
 				cells[index].setAttribute('class','calendarday');
